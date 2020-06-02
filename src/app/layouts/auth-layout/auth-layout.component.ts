@@ -28,4 +28,9 @@ export class AuthLayoutComponent implements OnInit, OnDestroy {
     var body = document.getElementsByTagName("body")[0];
     body.classList.remove("bg-default");
   }
+
+  scrollToElement($element): void {
+    console.log($element);
+    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
 }
